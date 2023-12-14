@@ -28,7 +28,7 @@ new Chart(ctx, {
         label: "Water Consumption in the City of New York",
         data: dataArr,
         borderWidth: 1,
-        borderColor: "#4169E1",
+        color: "#4169E1",
       },
     ],
   },
@@ -46,7 +46,13 @@ new Chart(ctx, {
     scales: {
       y: {
         beginAtZero: false,
-        text: "Per Capita Consumption",
+        title: {
+          display: true,
+          text: "Per Capita Consumption",
+          font: {
+            size: 30,
+          },
+        },
         ticks: {
           callback: function (value, index, ticks) {
             return value;
@@ -54,7 +60,13 @@ new Chart(ctx, {
         },
       },
       x: {
-        text: "Year",
+        title: {
+          display: true,
+          text: "Years",
+          font: {
+            size: 30,
+          },
+        },
       },
     },
   },
