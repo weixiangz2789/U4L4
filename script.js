@@ -9,7 +9,7 @@ async function getData() {
   rows.forEach(async (elem) => {
     const row = elem.split(",");
     const year = row[0];
-    const temp = row[2];
+    const temp = row[1];
     labelArr.push(year);
     dataArr.push(temp);
   });
@@ -48,7 +48,7 @@ new Chart(ctx, {
         beginAtZero: false,
         title: {
           display: true,
-          text: "Per Capita Consumption",
+          text: "Million Gallons Per Day",
           font: {
             size: 30,
           },
