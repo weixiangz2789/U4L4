@@ -9,9 +9,9 @@ async function getData() {
   rows.forEach(async (elem) => {
     const row = elem.split(",");
     const year = row[0];
-    const temp = row[1];
+    const water = row[1];
     labelArr.push(year);
-    dataArr.push(temp);
+    dataArr.push(water);
   });
 }
 
@@ -27,7 +27,7 @@ new Chart(ctx, {
       {
         label: "Water Consumption in the City of New York",
         data: dataArr,
-        borderWidth: 1,
+        borderWidth: 3,
         color: "#4169E1",
       },
     ],
